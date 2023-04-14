@@ -1,0 +1,11 @@
+#docker-compose.ymlのバージョン
+version: '3.8'
+
+#services以下に各コンテナの設定を書く
+services:
+  #アプリケーションのコンテナ
+  app:
+    build:
+      context: ./docker/app
+    volumes:
+      - ./api:/var/www/html
